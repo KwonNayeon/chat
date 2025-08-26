@@ -1,8 +1,9 @@
 export interface Message {
   id: string;
   content: string;
-  role: 'user' | 'assistant';
+  role: "user" | "assistant";
   timestamp: Date;
+  sources?: SearchResult[];
 }
 
 export interface ChatResponse {
@@ -15,5 +16,5 @@ export interface SearchResult {
   title: string;
   content: string;
   score: number;
-  type: 'project' | 'faq';
+  type: "project" | "faq";
 }
